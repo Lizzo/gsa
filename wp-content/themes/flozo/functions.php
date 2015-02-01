@@ -31,24 +31,30 @@ include_once( 'includes/theme-options.php' );
 /*** Option Tree end ***/
 
 function limit_words($string, $word_limit) {
- 
+
 	// creates an array of words from $string (this will be our excerpt)
 	// explode divides the excerpt up by using a space character
- 
+
 	$words = explode(' ', $string);
- 
+
 	// this next bit chops the $words array and sticks it back together
 	// starting at the first word '0' and ending at the $word_limit
 	// the $word_limit which is passed in the function will be the number
 	// of words we want to use
 	// implode glues the chopped up array back together using a space character
- 
+
 	return implode(' ', array_slice($words, 0, $word_limit));
- 
+
 }
 
 
 add_theme_support( 'menus' );
+
+if ( function_exists( 'add_theme_support' ) ) {
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 150, 150, true ); // default Post Thumbnail dimensions (cropped)
+
+}
 
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
@@ -58,46 +64,82 @@ if ( function_exists('register_sidebar') )
 		'after_title' => '</h3>',
 ));
 
-add_action('init', 'work_register');   
+add_action('init', 'work_register');
+add_action('init', 'news_register');
 
-function work_register() {   
+function work_register() {
 
-	$labels = array( 
-		'name' => _x('Work', 'post type general name'), 
-		'singular_name' => _x('Work Item', 'post type singular name'), 
-		'add_new' => _x('Add New', 'work item'), 
-		'add_new_item' => __('Add New Work Item'), 
-		'edit_item' => __('Edit Work Item'), 
-		'new_item' => __('New Work Item'), 
-		'view_item' => __('View Work Item'), 
-		'search_items' => __('Search Work'), 
-		'not_found' => __('Nothing found'), 
-		'not_found_in_trash' => __('Nothing found in Trash'), 
-		'parent_item_colon' => '' 
-	);   
-	
-	$args = array( 
-		'labels' => $labels, 
-		'public' => true, 
-		'publicly_queryable' => true, 
-		'show_ui' => true, 
-		'query_var' => true, 
-		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png', 
-		'rewrite' => true, 'capability_type' => 'post', 
-		'hierarchical' => false, 
-		'menu_position' => null, 
-		'supports' => array('title','editor','thumbnail') 
-	);   
-	
-	register_post_type( 'work' , $args ); 
-	
+	$labels = array(
+		'name' => _x('Work', 'post type general name'),
+		'singular_name' => _x('Work Item', 'post type singular name'),
+		'add_new' => _x('Add New', 'work item'),
+		'add_new_item' => __('Add New Work Item'),
+		'edit_item' => __('Edit Work Item'),
+		'new_item' => __('New Work Item'),
+		'view_item' => __('View Work Item'),
+		'search_items' => __('Search Work'),
+		'not_found' => __('Nothing found'),
+		'not_found_in_trash' => __('Nothing found in Trash'),
+		'parent_item_colon' => ''
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'query_var' => true,
+		'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+		'rewrite' => true, 'capability_type' => 'post',
+		'hierarchical' => false,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
+	);
+
+	register_post_type( 'work' , $args );
+
 	//register_taxonomy("categories", array("work"), array("hierarchical" => true, "label" => "Categories", "singular_label" => "Category", "rewrite" => true));
-	
-	
-	
-}
-	
 
+
+
+}
+
+function news_register() {
+
+  $labels = array(
+    'name' => _x('News', 'post type general name'),
+    'singular_name' => _x('News Item', 'post type singular name'),
+    'add_new' => _x('Add New', 'news item'),
+    'add_new_item' => __('Add New news Item'),
+    'edit_item' => __('Edit news Item'),
+    'new_item' => __('New news Item'),
+    'view_item' => __('View news Item'),
+    'search_items' => __('Search news'),
+    'not_found' => __('Nothing found'),
+    'not_found_in_trash' => __('Nothing found in Trash'),
+    'parent_item_colon' => ''
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'query_var' => true,
+    'menu_icon' => get_stylesheet_directory_uri() . '/article16.png',
+    'rewrite' => true, 'capability_type' => 'post',
+    'hierarchical' => false,
+    'menu_position' => null,
+    'supports' => array('title','editor','thumbnail')
+  );
+
+  register_post_type( 'news' , $args );
+
+  //register_taxonomy("categories", array("work"), array("hierarchical" => true, "label" => "Categories", "singular_label" => "Category", "rewrite" => true));
+
+
+
+}
 
 
 
@@ -151,7 +193,7 @@ function post_comments( $comment, $args, $depth ) {
 
 
 
-// Custom functions 
+// Custom functions
 
 // START : Show word count on blog post pages
 // See more about the word count and reading time here http://www.welcomebrand.co.uk/blog/2010/12/12/wordpress-reading-time-and-word-count/
@@ -169,7 +211,7 @@ function est_read_time( $return = false) {
 	$wordcount = round(str_word_count(get_the_content()), -2);
 	$minutes_fast = ceil($wordcount / 250);
 	$minutes_slow = ceil($wordcount / 170);
- 
+
 	if ($wordcount <= 100) {
 		$output = __("< 1 minute");
 	} else {
@@ -178,7 +220,7 @@ function est_read_time( $return = false) {
 	echo $output;
 }
 endif;
- 
+
 if (!function_exists('est_the_content')):
 function est_the_content( $orig ) {
 	// Prepend the reading time to the post content
@@ -189,7 +231,7 @@ endif;
 
 
 // Tidy up the <head> a little. Full reference of things you can show/remove is here: http://rjpargeter.com/2009/09/removing-wordpress-wp_head-elements/
-remove_action('wp_head', 'wp_generator');// Removes the WordPress version as a layer of simple security 
+remove_action('wp_head', 'wp_generator');// Removes the WordPress version as a layer of simple security
 
 add_theme_support('post-thumbnails');
 

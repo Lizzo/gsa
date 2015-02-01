@@ -5,7 +5,7 @@
 	Version: 1.0
 	Description: A theme to help your business on its way!
 
-	
+
 
 */
 
@@ -127,13 +127,13 @@ h6 {
 
 
 blockquote { }
-	
-blockquote cite { }	
+
+blockquote cite { }
 
 
 
 
-img, 
+img,
 a img {
 	max-width: 		100%;
 }
@@ -152,6 +152,10 @@ figcaption { }
 .alignright {
 
 	float: none;
+}
+
+.alignleft {
+	padding-right: 20px;
 }
 
 /* Custom */
@@ -224,17 +228,17 @@ header{
 	overflow: auto;
 	height: auto;
 	background: #ffffff;
-	
+
 }
 	header a.logo{
 		float: left;
-		display: block;	
-	} 
+		display: block;
+	}
 		header p.tagline{
 			float: left;
 			margin: 40px 0 0 20px;
 		}
-		
+
 ul.social{
 	position: relative;
 	z-index: 1;
@@ -275,8 +279,8 @@ ul.social{
 				}
 				ul.social li a.facebook:hover{
 					background-position: right bottom;
-				}	
-			
+				}
+
 .contact{
 	position: absolute;
 	top: 65px;
@@ -299,7 +303,7 @@ ul.social{
 			line-height: 28px;
 			padding-left: 5px;
 			color: #ee4952;
-		}		
+		}
 
 
 ul#menu-main {
@@ -372,10 +376,10 @@ ul#menu-main {
 		#content ul.bjqs li, #content ul.bjqs{
 			list-style: none;
 		}
-	
+
 ul.bjqs-controls, ul.bjqs-controls li{
 	list-style: none;
-}	
+}
 
 	li.bjqs-prev a, li.bjqs-next a{
 		background: #ee4952 url('images/backforward.png') no-repeat;
@@ -385,7 +389,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		color: white;
 		margin-top: -18px;
 	}
-	
+
 		li.bjqs-prev a{
 			background-position: left center;
 		}
@@ -398,13 +402,13 @@ ul.bjqs-controls, ul.bjqs-controls li{
 			li.bjqs-next a:hover{
 				background: #000 url('images/backforward.png') no-repeat right center;
 			}
-		
-		
-/** End Slider **/		
+
+
+/** End Slider **/
 
 #content{
 	width: 960px;
-	
+
 }
 .blog #content{
 		width: 660px;
@@ -431,7 +435,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		#sidebar ul li, #sidebar ul p{
 			font-style: italic;
 		}
-		
+
 
 	.blog #sidebar{
 		margin-top: 53px;
@@ -453,7 +457,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 
 .navigation{
 	clear: both;
-	width: 100%;	
+	width: 100%;
 }
 	.navigation .older{
 		float: left;
@@ -503,8 +507,8 @@ ul.bjqs-controls, ul.bjqs-controls li{
 			}
 
 #content .work {padding: 0 !important;}
-		
-		
+
+
 #content .work, #content .info, #content .home {
 		overflow: auto;
 		width: 865px;
@@ -521,11 +525,11 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		}
 		#content .work li > a {
 			display: block;
-		}	
+		}
 			#content .work ul li a:hover{
 				text-decoration:none;
 			}
-	
+
 	#content .work h1{
 		text-align: left;
 		padding-bottom: 20px;
@@ -540,6 +544,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		padding-bottom: 0px;
 		/*background: url('images/split.png') repeat-x;*/
 		margin-top: 10px;
+		font-weight: 400;
 	}
 		#content .work h2 span{
 			width: 200px;
@@ -551,7 +556,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		#content .work ul{
 				padding: 0;
 			}
-			
+
 				#content .work ul li{
 					width: 100%;
 					text-align: left;
@@ -559,7 +564,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 					overflow: hidden;
 					position: relative;
 					list-style: none;
-				
+
 				}
 				#content .work li .overlay{
 					position: absolute;
@@ -571,31 +576,31 @@ ul.bjqs-controls, ul.bjqs-controls li{
 					background: url('images/arrow.png') no-repeat center center;
 					display: none;
 				}
-			
+
 				#content .work ul li img{
 					margin-bottom: 15px;
 				}
-						
-				
+
+
 				#content .work ul li .gallery {
 					display:none;
 				}
-		
+
 				#content .work ul li, #content .work ul li {
 					border-bottom: 2px solid #3e81b3;
 					padding-bottom: 10px;
 					margin-bottom: 10px;
 					background: none;
-					
-					
+
+
 				}
-				
+
 					#content .work ul li h3 a{
 						text-decoration: none;
-						
+
 					}
-				
-		
+
+
 			#content .work ul.category{
 				overflow: auto;
 				font-family: BebasNeueRegular, Helvetica, Arial, sans-serif;
@@ -608,7 +613,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 					width: auto;
 					font-size: 18px;
 					margin: 0 10px 0 0;
-					
+
 				}
 					#content .work ul.category li a{
 						text-decoration: none;
@@ -616,11 +621,60 @@ ul.bjqs-controls, ul.bjqs-controls li{
 						#content .work ul.category li a:hover{
 							color: #ee4952;
 						}
-		
 
-	
-	
-		
+
+
+
+
+#content .news li {
+	list-style: none;
+	height: 100%;
+	overflow: auto;
+	padding: 20px 0;
+	border-bottom: 1px solid #EBEBEB;
+}
+
+	#content .news li a:first-child {
+		height: 90px;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+
+	#content .news img.alignleft {
+		width: 140px;
+	}
+
+	#content .news li h2 {
+		margin:  0 10px;
+		font-weight: 400;
+	}
+
+	#content .news .center-flex {
+		height: 90px;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	#content .news h2 a {
+		height: 25px !important;
+	}
+	#content .news li a {
+		position: relative;
+		float: left;
+	}
+
+
 
 
 #content .blog{
@@ -674,7 +728,7 @@ p.entry-meta{
 		line-height: 35px;
 		padding-bottom: 20px;
 		background: url('images/split2.png') repeat-x;
-		
+
 	}
 		#content .blog h2 span{
 			background-color: #000;
@@ -682,7 +736,7 @@ p.entry-meta{
 			display: block;
 			margin: 0 auto;
 		}
-	
+
 		#content .blog ul{
 			margin: 0;
 			padding: 0;
@@ -694,19 +748,19 @@ p.entry-meta{
 			margin: 0 0 0 30px;
 			list-style: none;
 			height: 300px;
-			
+
 		}
 		#content .blog ul li:first-child{
 			margin-left: 0;
 		}
-			
+
 		#content .blog ul li a{
 			text-decoration: none;
-		}	
+		}
 			#content .blog ul li a:hover{
 				color: #ee4952;
 			}
-				
+
 			#content .blog ul li h3{
 				margin-bottom: 0px;
 			}
@@ -714,7 +768,7 @@ p.entry-meta{
 				padding-top: 0px;
 				margin-top: 0px;
 				color: #ee4952;
-				
+
 				border-bottom: 2px solid #333;
 				padding-bottom: 10px;
 			}
@@ -728,13 +782,13 @@ p.entry-meta{
 .sub-navigation {
 	margin-top: 34px;
 	border-bottom:0;
-	
+
 }
-	
+
 	.sub-navigation h2{
 		border-bottom: 3px solid #ebebeb;
 		padding-bottom: 6px;
-		
+
 	}
 		.sub-navigation li.current_page_item ul li{
 			background: none;
@@ -761,7 +815,7 @@ p.entry-meta{
 			list-style:none;
 		}
 		.sub-navigation ul a {
-			
+
 			padding-left:24px;
 		}
 		.sub-navigation li a:hover {
@@ -817,7 +871,7 @@ p.entry-meta{
 	background: #000;
 	overflow: auto;
 	padding:35px 38px;
-}	
+}
 	#footer .col3{
 		width: 100%;
 		margin: 0 60px 0 0;
@@ -846,8 +900,8 @@ p.entry-meta{
 				display: block;
 				position: relative;
 			}
-		
-		
+
+
 	#footer .copyright{
 		display: block;
 		margin-top:30px;
