@@ -339,7 +339,7 @@ ul#menu-main {
 
 
 #container{
-	width: 960px;
+	width: 1140px;
 	margin: 0 auto;
 	background: #eaeaea;
 	overflow: auto;
@@ -407,7 +407,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 /** End Slider **/
 
 #content{
-	width: 960px;
+	width: 1140px;
 
 }
 .blog #content{
@@ -511,7 +511,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
 
 #content .work, #content .info, #content .home {
 		overflow: auto;
-		width: 865px;
+		width: 1060px;
 		margin: 20px auto 40px auto;
 		background: #fff;
 		padding:20px;
@@ -674,6 +674,55 @@ ul.bjqs-controls, ul.bjqs-controls li{
 		float: left;
 	}
 
+
+/* PARNERSHIPS */
+/* PARNERSHIPS */
+/* PARNERSHIPS */
+/* PARNERSHIPS */
+/* PARNERSHIPS */
+
+.partnerships li {
+  list-style: none;
+  overflow: auto;
+  clear: both;
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.partnerships li:last-child {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0;
+}
+
+.partnerships li:first-child {
+  margin-top: 50px;
+}
+
+.partnerships .partner-logo {
+  width: 15%;
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.partnerships .partner-info {
+  width: 80%;
+  float: left;
+  display: block;
+  position: relative;
+  margin-left: 5%;
+}
+
+.partnerships .website {
+  position: absolute;
+  right: 30px;
+  top: 0;
+  color: #3E81B3;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 
 
