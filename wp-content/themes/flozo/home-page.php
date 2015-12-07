@@ -28,7 +28,7 @@ Template Name: Home
 		<?php if(ot_get_option( 'feature_image_4' ) != ''){ ?><li><img src="<?php echo ot_get_option( 'feature_image_4' ); ?>"/><p><?php echo ot_get_option( 'feature_text_4' ); ?></p></li><?php } ?>
 		<?php if(ot_get_option( 'feature_image_5' ) != ''){ ?><li><img src="<?php echo ot_get_option( 'feature_image_5' ); ?>"/><p><?php echo ot_get_option( 'feature_text_5' ); ?></p></li><?php } ?>
 	</ul>
-	
+
 </div>
 <?php } ?>
 <div id="content">
@@ -38,9 +38,11 @@ Template Name: Home
 		<div class="statement">
 			<h1>Our Mission</h2>
 			<div class="text" title="Mission Statement">
-				Gulf State Analytics (GSA) assesses risks and opportunities among Gulf Cooperation Council (GCC) states for lenders, traders, investors, policymakers, and other parties. In today’s volatile environment, stakeholders demand current, objective, and independent assessments of the GCC’s complex state of affairs. Our team of renowned economists, political scientists, former diplomats, and regional experts distinguish between fact and fiction to provide timely insights into current events in the GCC.
+				Gulf State Analytics (GSA) is a Washington, DC-based geopolitical risk consultancy which assesses risks and opportunities among Gulf Cooperation Council (GCC) states for lenders, traders, investors, policymakers, and other parties. In today’s volatile environment, stakeholders demand current, objective, and independent assessments of the GCC’s complex state of affairs. Our team of renowned economists, political scientists, former diplomats, and regional experts distinguish between fact and fiction to provide timely insights into current events in the GCC.
 			</div>
 		</div>
+
+
 		<div class="delivery">
 			<h1>GSA’s monthly monitor delivers</h2>
 			<ul class="list">
@@ -52,8 +54,22 @@ Template Name: Home
 				<li>Information collected from on-the-ground sources and local media with thoughtful analysis</li>
 			</ul>
 		</div>
+
+    <div class="logo-carousel">
+      <h1>Gulf State Analytics Referenced In</h1>
+      <div class="logos">
+        <div class="row">
+          <a href="http://www.ft.com/"><img src="http://gulfstateanalytics.com/wp-content/uploads/2015/12/Financial-Times.jpg"></a>
+          <a href="http://www.wsj.com/"><img src="http://gulfstateanalytics.com/wp-content/uploads/2015/12/WSJ.png"></a>
+          <a href="http://www.bloomberg.com/"><img style="position: relative; top: 4px; left: 19px;" src="http://gulfstateanalytics.com/wp-content/uploads/2015/02/Bloomberg-Logo.jpg"></a>
+          <a href="http://www.reuters.com/"><img style="position: relative; top: -4px;" src="http://gulfstateanalytics.com/wp-content/uploads/2015/12/Reuters_logo-1024x245.png"></a>
+          <a href="http://www.arabianbusiness.com/"><img src="http://gulfstateanalytics.com/wp-content/uploads/2015/12/ArabianBusiness.png"></a>
+        </div>
+      </div>
+    </div>
+
 			</div>
-		
-		
+
+
 	</div>
 <?php get_footer(); ?>

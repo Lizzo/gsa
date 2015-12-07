@@ -175,14 +175,48 @@ h3 a {color: #3e81b3;}
 	margin-top: 10px;
 }
 
+#content .home .logos {
+  overflow: auto;
+}
+
+#content .home .logo-carousel {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+
+
+#content .home .logos a {
+  width: 18%;
+  position: relative;
+  float: left;
+  display: block;
+  padding-right: 2%;
+  top: 20px;
+}
+
+#content .home .logos a:first-child {
+  top: 0;
+}
+
+#content .home .logos a:last-child {
+  padding-right: 0;
+}
+
 #content .home .statement {
 	border-bottom: 1px solid #ebebeb;
 	padding-bottom: 20px;
 }
 
+#content .home .statement .text {
+  text-align: justify;
+}
+
 #content .home .delivery {
 	position: relative;
-	margin-top: 25px;
+	margin-top: 30px;
+  border-bottom: 1px solid #ebebeb;
 }
 
 #content .home .text {
@@ -675,13 +709,13 @@ ul.bjqs-controls, ul.bjqs-controls li{
 	}
 
 
-/* PARNERSHIPS */
-/* PARNERSHIPS */
-/* PARNERSHIPS */
-/* PARNERSHIPS */
-/* PARNERSHIPS */
+/* PARNERSHIPS && NEWS */
+/* PARNERSHIPS && NEWS */
+/* PARNERSHIPS && NEWS */
+/* PARNERSHIPS && NEWS */
+/* PARNERSHIPS && NEWS */
 
-.partnerships li {
+.partnerships li, .news li {
   list-style: none;
   overflow: auto;
   clear: both;
@@ -691,23 +725,31 @@ ul.bjqs-controls, ul.bjqs-controls li{
   border-bottom: 1px solid #eaeaea;
 }
 
-.partnerships li:last-child {
+.news li {
+  margin-bottom: 0;
+}
+
+.partnerships li:last-child, .news li:last-child {
   border-bottom: 1px solid transparent;
   padding-bottom: 0;
 }
 
-.partnerships li:first-child {
+.partnerships li:first-child, .news li:first-child {
   margin-top: 50px;
 }
 
-.partnerships .partner-logo {
+.news li:first-child {
+  margin-top: 0;
+}
+
+.partnerships .partner-logo, .news .partner-logo {
   width: 15%;
   float: left;
   position: relative;
   display: block;
 }
 
-.partnerships .partner-info {
+.partnerships .partner-info, .news .article-title {
   width: 80%;
   float: left;
   display: block;
@@ -715,7 +757,7 @@ ul.bjqs-controls, ul.bjqs-controls li{
   margin-left: 5%;
 }
 
-.partnerships .website {
+.partnerships .website, .news .website {
   position: absolute;
   right: 30px;
   top: 0;
